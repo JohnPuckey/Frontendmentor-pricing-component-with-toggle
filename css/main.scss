@@ -1,0 +1,103 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import 'vars';
+/* General Styles */
+
+/*  background: linear-gradient(135deg, color(gradient-a), color(gradient-b)); */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    background-color: color(neutral-verylight);
+}
+
+
+/* Typography */
+
+h1 {
+    font-size: 2rem;
+    color: color(neutral);
+}
+
+h3 {
+    font-size: 1rem;
+    color: color(neutral-light);
+}
+
+/* backgroung-images */
+
+/* Pricing Setion - Top */
+
+.pricing-title {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 45px;
+}
+
+/* Pricing Section - Toggle */
+
+.pricing-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    
+    h3 {
+        padding: 0 20px;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+
+    /* hide default checkbox */
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        border-radius: 34px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, color(gradient-a), color(gradient-b));
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        border-radius: 50%;
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: #fff;
+        transition: .4s;
+    }
+
+    input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(26px)
+    }
+}
+
+/* Pricing Section - cards */

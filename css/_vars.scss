@@ -1,0 +1,14 @@
+$colors: (
+    gradient-a: hsl(236, 72%, 79%),
+    gradient-b: hsl(237, 63%, 64%),
+
+    neutral-verylight: hsl(240, 78%, 98%),
+    neutral-light: hsl(234, 14%, 74%),
+    neutral: hsl(233, 13%, 49%),
+    neutral-dark: hsl(232, 13%, 33%)
+
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+};
