@@ -30,7 +30,8 @@ h3 {
   color: #b3b5c6;
 }
 
-p, a {
+p,
+a {
   font-weight: 700;
   letter-spacing: .5px;
   font-size: .85rem;
@@ -117,8 +118,11 @@ p, a {
 }
 
 .pricing-toggle input:focus + .slider {
-  -webkit-box-shadow: 0 0 1px #2196F3;
-          box-shadow: 0 0 1px #2196F3;
+  background: linear-gradient(135deg, #cfd1f7, #9397e6);
+}
+
+.pricing-toggle input:hover + .slider {
+  background: linear-gradient(135deg, #cfd1f7, #9397e6);
 }
 
 .pricing-toggle input:checked + .slider:before {
@@ -158,6 +162,8 @@ p, a {
   text-align: center;
   border-radius: 10px;
   padding-bottom: 30px;
+  -webkit-box-shadow: 0px 4px 10px -4px #d0d2dc;
+          box-shadow: 0px 4px 10px -4px #d0d2dc;
 }
 
 .pricing-cards .card h2 {
@@ -206,16 +212,47 @@ p, a {
   text-decoration: none;
 }
 
+.pricing-cards .card a:hover {
+  background: transparent;
+  border: 1px solid #6d708d;
+  color: #696fdd;
+  width: 268px;
+  padding: 14px 0;
+}
+
 .pricing-cards .blue-card {
   background: linear-gradient(135deg, #a3a8f0, #696fdd);
 }
 
-.pricing-cards .blue-card h2, .pricing-cards .blue-card p, .pricing-cards .blue-card .price {
+.pricing-cards .blue-card h2,
+.pricing-cards .blue-card p,
+.pricing-cards .blue-card .price {
   color: #fff;
 }
 
 .pricing-cards .blue-card a {
   background: #fff;
   color: #696fdd;
+}
+
+.pricing-cards .blue-card a:hover {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  width: 268px;
+  padding: 14px 0;
+}
+
+/* checkbox functionality */
+.monthly {
+  display: none;
+}
+
+.annually {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 /*# sourceMappingURL=main.css.map */
